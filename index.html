@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Assembly No. 5 | International Order of the Rainbow for Girls</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Custom colors reflecting the Rainbow lessons
+                        'rainbow-red': '#ef4444', // Love
+                        'rainbow-orange': '#f97316', // Religion
+                        'rainbow-yellow': '#facc15', // Nature
+                        'rainbow-green': '#10b981', // Immortality
+                        'rainbow-blue': '#3b82f6', // Fidelity
+                        'rainbow-indigo': '#6366f1', // Patriotism
+                        'rainbow-violet': '#8b5cf6', // Service
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Apply smooth scrolling for internal links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom gradient for the hero section to evoke the rainbow */
+        .hero-gradient {
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 30%, #10b981 60%, #facc15 100%);
+        }
+        /* Basic styles for the card hover effect */
+        .lesson-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-rainbow-indigo tracking-wider">
+                AUSTIN ASSEMBLY <span class="text-rainbow-blue">#5</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#mission" class="text-gray-600 hover:text-rainbow-violet transition duration-200">Our Mission</a>
+                <a href="#lessons" class="text-gray-600 hover:text-rainbow-violet transition duration-200">The 7 Lessons</a>
+                <a href="#service" class="text-gray-600 hover:text-rainbow-violet transition duration-200">Service & Impact</a>
+                <a href="#join" class="text-gray-600 hover:text-rainbow-violet transition duration-200">Join Us</a>
+            </nav>
+            <a href="#join" class="hidden md:block bg-rainbow-violet hover:bg-rainbow-indigo text-white font-semibold py-2 px-4 rounded-full shadow-lg transition duration-300">
+                Get Started
+            </a>
+            <!-- Mobile Menu Icon (Placeholder for functionality) -->
+            <button class="md:hidden text-gray-600 hover:text-rainbow-violet">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 sm:py-28" id="home">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+                Austin Rainbow Girls: <br class="sm:hidden">
+                <span class="bg-white text-gray-900 px-3 py-1 rounded-xl shadow-lg inline-block mt-2 sm:mt-0">Leaders, Friends, Citizens.</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto">
+                Discover your confidence. The International Order of the Rainbow for Girls prepares young women (ages 11–20) to be the best versions of themselves through character development, leadership, and lifelong friendships.
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#join" class="inline-block bg-white text-rainbow-violet font-bold text-lg py-3 px-8 rounded-full shadow-2xl hover:bg-gray-200 transition duration-300 transform hover:scale-105">
+                    Join Austin Assembly #5
+                </a>
+                <a href="#mission" class="inline-block border-2 border-white text-white font-semibold text-lg py-3 px-8 rounded-full hover:bg-white hover:text-rainbow-violet transition duration-300">
+                    See Our Mission
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Core Pillars Section -->
+    <section class="py-16 sm:py-24" id="mission">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-gray-900">
+                What We Do: Building Tomorrow's Leaders
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Pillar 1: Leadership -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-rainbow-blue text-center lesson-card">
+                    <span class="text-5xl mb-4 inline-block text-rainbow-blue">👑</span>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Build Leaders</h3>
+                    <p class="text-gray-600">
+                        Gain real-world leadership experience by holding office, running meetings, and directing service projects. Master public speaking and develop self-respect and poise.
+                    </p>
+                </div>
+
+                <!-- Pillar 2: Service -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-rainbow-yellow text-center lesson-card">
+                    <span class="text-5xl mb-4 inline-block text-rainbow-yellow">🤝</span>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Serve Our Community</h3>
+                    <p class="text-gray-600">
+                        Making a difference is the cornerstone of Rainbow. We volunteer for worthy causes and lead local charity projects, instilling the value of unselfish service.
+                    </p>
+                </div>
+
+                <!-- Pillar 3: Sisterhood -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-rainbow-violet text-center lesson-card">
+                    <span class="text-5xl mb-4 inline-block text-rainbow-violet">🌈</span>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Create Sisterhood</h3>
+                    <p class="text-gray-600">
+                        Form friendships that last a lifetime, not just in Austin, but across Texas and the world. Enjoy fun activities, travel, and a supportive, safe environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Seven Lessons Section -->
+    <section class="bg-white py-16 sm:py-24 border-t border-gray-200" id="lessons">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-gray-900">
+                The Seven Life Lessons of the Rainbow
+            </h2>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-4xl mx-auto">
+                Each color of the Rainbow path teaches a vital life lesson, guiding girls toward responsible and purposeful adulthood.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-7xl mx-auto">
+                
+                <!-- Lesson 1: Red (Love) -->
+                <div class="bg-rainbow-red lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                    <div class="text-2xl font-bold mb-1">❤️ Love</div>
+                    <p class="text-sm">Of home, family, and community.</p>
+                </div>
+
+                <!-- Lesson 2: Orange (Religion) -->
+                <div class="bg-rainbow-orange lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                    <div class="text-2xl font-bold mb-1">🙏 Religion</div>
+                    <p class="text-sm">Belief in a Supreme Being and respect for all faiths.</p>
+                </div>
+
+                <!-- Lesson 3: Yellow (Nature) -->
+                <div class="bg-rainbow-yellow lesson-card text-gray-900 p-4 rounded-xl shadow-md text-center">
+                    <div class="text-2xl font-bold mb-1">🌳 Nature</div>
+                    <p class="text-sm">Appreciation for the world around us.</p>
+                </div>
+
+                <!-- Lesson 4: Green (Immortality) -->
+                <div class="bg-rainbow-green lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                    <div class="text-2xl font-bold mb-1">🌱 Immortality</div>
+                    <p class="text-sm">Leaving a positive legacy through our actions.</p>
+                </div>
+
+                <!-- Lesson 5: Blue (Fidelity) -->
+                <div class="bg-rainbow-blue lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                    <div class="text-2xl font-bold mb-1">🤝 Fidelity</div>
+                    <p class="text-sm">Loyalty, honesty, and trustworthiness in all things.</p>
+                </div>
+
+                <!-- Lesson 6: Indigo (Patriotism) -->
+                <div class="bg-rainbow-indigo lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                    <div class="text-2xl font-bold mb-1">🇺🇸 Patriotism</div>
+                    <p class="text-sm">Love for country and active, responsible citizenship.</p>
+                </div>
+
+                <!-- Lesson 7: Violet (Service) -->
+                <div class="bg-rainbow-violet lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                    <div class="text-2xl font-bold mb-1">🎁 Service</div>
+                    <p class="text-sm">Unselfish acts of kindness to others.</p>
+                </div>
+            </div>
+
+            <!-- Faith, Hope, Charity Footer -->
+            <div class="mt-12 text-center text-xl font-semibold text-gray-700">
+                The foundation of our Order rests on <span class="text-rainbow-blue">Faith</span>, <span class="text-rainbow-yellow">Hope</span>, and <span class="text-rainbow-red">Charity</span>.
+            </div>
+        </div>
+    </section>
+    
+    <!-- Join Us Section -->
+    <section class="py-16 sm:py-24 bg-gray-100" id="join">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-2xl border-t-4 border-rainbow-indigo">
+                <h2 class="text-3xl font-extrabold text-center mb-6 text-gray-900">
+                    Ready to Start Your Rainbow Journey?
+                </h2>
+                <p class="text-center text-lg text-gray-600 mb-8">
+                    Joining Austin Assembly #5 is simple. We welcome girls aged 11–20 (Pledges 8–10) who are ready to laugh, learn, and lead.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-10">
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 text-rainbow-indigo flex items-center">
+                            <span class="text-2xl mr-2">📅</span> Quick Details
+                        </h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="font-bold w-20">Ages:</span> 11–20 (Pledges 8–10)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-bold w-20">Meetings:</span> 2nd & 4th Wednesdays @ 7:30 PM
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-bold w-20">Location:</span> [Your Masonic Center Name/Address Here]
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 text-rainbow-indigo flex items-center">
+                            <span class="text-2xl mr-2">💌</span> Get In Touch
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            The best way to learn is to meet us! Contact our Mother Advisor to confirm our next event.
+                        </p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><strong>Mother Advisor:</strong> Jane Doe</li>
+                            <li><strong>Email:</strong> <a href="mailto:austinassembly5@gmail.com" class="text-rainbow-blue hover:underline">Austin Assembly 5</a></li>
+                            <li><strong>Phone:</strong> (512) 555-0199</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button onclick="window.location.href='mailto:austinassembly5@gmail.com'" class="bg-rainbow-violet hover:bg-rainbow-indigo text-white font-bold text-lg py-3 px-10 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
+                        Email Us Today!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4">
+                <a href="#mission" class="text-gray-400 hover:text-white mx-3">Mission</a>
+                <span class="text-gray-600">|</span>
+                <a href="#lessons" class="text-gray-400 hover:text-white mx-3">Lessons</a>
+                <span class="text-gray-600">|</span>
+                <a href="#join" class="text-gray-400 hover:text-white mx-3">Contact</a>
+            </div>
+            <p class="text-sm text-gray-500">
+                &copy; <span id="current-year"></span> Austin Assembly No. 5, International Order of the Rainbow for Girls.
+            </p>
+            <p class="text-xs text-gray-600 mt-1">
+                Affiliated with Texas Grand Assembly and the Masonic Family.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Simple mobile navigation toggle (optional but good for UX)
+        // You would typically implement a dropdown menu here.
+    </script>
+
+</body>
+</html>

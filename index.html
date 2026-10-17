@@ -264,13 +264,13 @@
                         </p>
                         <ul class="space-y-2 text-gray-700">
                             <li><strong>Mother Advisor:</strong> Nicole</li>
-                            <li><strong>Email:</strong> <a href="mailto:austinassembly5@gmail.com" class="text-rainbow-blue hover:underline">Austin Assembly 5</a></li>
+                            <li><strong>Email:</strong> <a href="#join" data-email class="text-rainbow-blue hover:underline">Austin Assembly 5</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="mailto:austinassembly5@gmail.com" class="inline-block bg-rainbow-violet hover:bg-rainbow-indigo text-white font-bold text-lg py-3 px-10 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
+                    <a href="#join" data-email class="inline-block bg-rainbow-violet hover:bg-rainbow-indigo text-white font-bold text-lg py-3 px-10 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
                         Email Us Today!
                     </a>
                     <!-- NEW DOWNLOAD BUTTON -->
@@ -305,6 +305,19 @@
     <script>
         // Set current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Email links: the address is never written in the page source, so scrapers
+        // that read the raw HTML can't harvest it. It's assembled (from reversed
+        // pieces) only when a visitor touches, hovers, focuses or clicks a link.
+        (function () {
+            const flip = t => t.split('').reverse().join('');
+            const address = () => flip('5ylbmessanitsua') + String.fromCharCode(64) + flip('moc.liamg');
+            document.querySelectorAll('[data-email]').forEach(link => {
+                const arm = () => { link.href = 'mai' + 'lto:' + address(); };
+                ['pointerdown', 'mouseenter', 'focus', 'touchstart'].forEach(ev => link.addEventListener(ev, arm, { passive: true }));
+                link.addEventListener('click', arm);
+            });
+        })();
 
         // Phone menu: open/close with the button, close after choosing a link
         const menuButton = document.getElementById('menu-button');

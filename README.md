@@ -11,7 +11,8 @@ Website for Austin Assembly No. 5, International Order of the Rainbow for Girls:
 | `src/input.css` | Source for `styles.css`, including the few custom styles (rainbow banner, card hover) |
 | `tailwind.config.js` | Tailwind settings: the rainbow colors and the Inter font |
 | `og-image.png` | Picture shown when someone shares a link to the site |
-| `AA1042025-2017.pdf` | Membership application (linked from the Join section) |
+| `Austin5_Rainbow_Application.pdf` | Membership application, linked from the Join section (saved with the visitor's date in the name) |
+| `AA1042025-2017.pdf`, `Austin_Rainbow_Application_for_Membership_Rev_2017.pdf` | Older copies of the same application, kept so previously shared links keep working |
 
 ## Changing the page
 

@@ -18,13 +18,15 @@
                     },
                     colors: {
                         // Custom colors reflecting the Rainbow lessons
-                        'rainbow-red': '#ef4444', // Love
-                        'rainbow-orange': '#f97316', // Religion
-                        'rainbow-yellow': '#facc15', // Nature
-                        'rainbow-green': '#10b981', // Immortality
-                        'rainbow-blue': '#3b82f6', // Fidelity
-                        'rainbow-indigo': '#6366f1', // Patriotism
-                        'rainbow-violet': '#8b5cf6', // Service
+                        // Shades chosen so white text on each passes WCAG AA (4.5:1)
+                        'rainbow-red': '#dc2626', // Love
+                        'rainbow-orange': '#c2410c', // Religion
+                        'rainbow-yellow': '#facc15', // Nature (bright; pair with dark text only)
+                        'rainbow-gold': '#a16207', // readable yellow for text on white
+                        'rainbow-green': '#047857', // Immortality
+                        'rainbow-blue': '#2563eb', // Fidelity
+                        'rainbow-indigo': '#4f46e5', // Patriotism
+                        'rainbow-violet': '#7c3aed', // Service
                     }
                 }
             }
@@ -37,7 +39,7 @@
         }
         /* Custom gradient for the hero section to evoke the rainbow */
         .hero-gradient {
-            background: linear-gradient(135deg, #ef4444 0%, #f97316 15%, #facc15 30%, #10b981 45%, #3b82f6 60%, #6366f1 75%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #c2410c 15%, #b45309 30%, #047857 45%, #2563eb 60%, #4f46e5 75%, #7c3aed 100%);
         }
         /* Basic styles for the card hover effect */
         .lesson-card {
@@ -66,25 +68,27 @@
             <a href="#join" class="hidden md:block bg-rainbow-violet hover:bg-rainbow-indigo text-white font-semibold py-2 px-4 rounded-full shadow-lg transition duration-300">
                 Get Started
             </a>
-            <!-- Mobile Menu Icon (Placeholder for functionality) -->
-            <button class="md:hidden text-gray-600 hover:text-rainbow-violet">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" type="button" class="md:hidden p-2 -mr-2 text-gray-700 hover:text-rainbow-violet" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6L6 18"></path></svg>
             </button>
         </div>
-    </header>
 
-    <!-- Mobile Menu (Hidden by default, shown on md:hidden) -->
-    <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md border-t border-gray-100 pb-2 z-40 relative">
+    <!-- Mobile Menu (inside the sticky header so it stays reachable while scrolling) -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-2">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
             <a href="#mission" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 w-full text-left">Our Mission</a>
             <a href="#lessons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 w-full text-left">The 7 Lessons</a>
-            <a href="#join" class="block px-3 py-2 rounded-md text-base font-medium text-rainbow-violet hover:bg-gray-100 w-full text-left">Join Us</a>
+            <a href="#join" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 w-full text-left">Join Us</a>
+            <a href="https://checkout.square.site/merchant/R22PQMTR7QY9G/checkout/L3NMF4KRS2FT425SFQHPOPTN" target="_blank" rel="noopener" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 w-full text-left">Donate</a>
             <a href="#join" class="w-full text-center bg-rainbow-violet hover:bg-rainbow-indigo text-white font-semibold py-2 px-4 mt-2 rounded-full shadow-lg transition duration-300">
                 Get Started
             </a>
         </div>
     </nav>
-    
+    </header>
+
     <!-- Hero Section -->
     <section class="hero-gradient text-white py-20 sm:py-28" id="home">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -200,7 +204,7 @@
 
             <!-- Faith, Hope, Charity Footer -->
             <div class="mt-12 text-center text-xl font-semibold text-gray-700">
-                The foundation of our Order rests on <span class="text-rainbow-blue">Faith</span>, <span class="text-rainbow-yellow">Hope</span>, and <span class="text-rainbow-red">Charity</span>.
+                The foundation of our Order rests on <span class="text-rainbow-blue">Faith</span>, <span class="text-rainbow-gold">Hope</span>, and <span class="text-rainbow-red">Charity</span>.
             </div>
         </div>
     </section>
@@ -271,10 +275,10 @@
                 <span class="text-gray-600">|</span>
                 <a href="#join" class="text-gray-400 hover:text-white mx-3">Contact</a>
             </div>
-            <p class="text-sm text-gray-500">
+            <p class="text-sm text-gray-300">
                 &copy; <span id="current-year"></span> Austin Assembly No. 5, Grand Assembly of Texas, International Order of the Rainbow for Girls.
             </p>
-            <p class="text-xs text-gray-600 mt-1">
+            <p class="text-xs text-gray-400 mt-1">
                 Affiliated with Texas Grand Assembly and the Masonic Family.
             </p>
         </div>
@@ -284,8 +288,18 @@
         // Set current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Simple mobile navigation toggle (optional but good for UX)
-        // You would typically implement a dropdown menu here.
+        // Phone menu: open/close with the button, close after choosing a link
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        function setMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            menuButton.setAttribute('aria-expanded', open);
+            menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            document.getElementById('menu-icon-open').classList.toggle('hidden', open);
+            document.getElementById('menu-icon-close').classList.toggle('hidden', !open);
+        }
+        menuButton.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
     </script>
 
 </body>

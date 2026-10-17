@@ -1,0 +1,49 @@
+name: Build styles
+
+# Rebuilds styles.css whenever the page or the style settings change, so an edit
+# made anywhere (even in GitHub's web editor) gets matching styles automatically.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'src/**'
+      - 'tailwind.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-styles
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Build styles.css
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+
+      - name: Commit styles.css if it changed
+        run: |
+          if git diff --quiet -- styles.css; then
+            echo "styles.css is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add styles.css
+          git commit -m "Rebuild styles.css"
+          git push

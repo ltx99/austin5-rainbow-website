@@ -24,50 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Add Favicon (Rainbow Emoji) for Browser Tabs -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>">
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind to use Inter font and custom colors -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        // Custom colors reflecting the Rainbow lessons
-                        // Shades chosen so white text on each passes WCAG AA (4.5:1)
-                        'rainbow-red': '#dc2626', // Love
-                        'rainbow-orange': '#c2410c', // Religion
-                        'rainbow-yellow': '#facc15', // Nature (bright; pair with dark text only)
-                        'rainbow-gold': '#a16207', // readable yellow for text on white
-                        'rainbow-green': '#047857', // Immortality
-                        'rainbow-blue': '#2563eb', // Fidelity
-                        'rainbow-indigo': '#4f46e5', // Patriotism
-                        'rainbow-violet': '#7c3aed', // Service
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Apply smooth scrolling for internal links */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Custom gradient for the hero section to evoke the rainbow */
-        .hero-gradient {
-            background: linear-gradient(135deg, #dc2626 0%, #c2410c 15%, #b45309 30%, #047857 45%, #2563eb 60%, #4f46e5 75%, #7c3aed 100%);
-        }
-        /* Basic styles for the card hover effect */
-        .lesson-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .lesson-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <!-- Site styles (built from src/input.css by Tailwind; see README) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
 

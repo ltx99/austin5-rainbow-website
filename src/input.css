@@ -1,0 +1,23 @@
+/* Source for styles.css. Edit this file, not styles.css (that one is generated). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply smooth scrolling for internal links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom gradient for the hero section to evoke the rainbow */
+.hero-gradient {
+  background: linear-gradient(135deg, #dc2626 0%, #c2410c 15%, #b45309 30%, #047857 45%, #2563eb 60%, #4f46e5 75%, #7c3aed 100%);
+}
+
+/* Basic styles for the card hover effect */
+.lesson-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}

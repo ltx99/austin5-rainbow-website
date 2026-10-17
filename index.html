@@ -32,27 +32,27 @@
     <!-- Navigation Bar -->
     <header class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-rainbow-indigo tracking-wider">
-                AUSTIN ASSEMBLY <span class="text-rainbow-blue">#5</span>
-            </div>
-            <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="#" id="site-name" class="text-base min-[360px]:text-xl sm:text-2xl font-bold text-rainbow-indigo tracking-wide sm:tracking-wider whitespace-nowrap" aria-label="Austin Assembly #5 IORG – back to top">
+                AUSTIN ASSEMBLY <span class="text-rainbow-blue">#5</span> <span class="text-rainbow-violet">IORG</span>
+            </a>
+            <nav class="hidden lg:flex space-x-8 font-medium">
                 <a href="#mission" class="text-gray-600 hover:text-rainbow-violet transition duration-200">Our Mission</a>
                 <a href="#lessons" class="text-gray-600 hover:text-rainbow-violet transition duration-200">The 7 Lessons</a>
                 <a href="#join" class="text-gray-600 hover:text-rainbow-violet transition duration-200">Join Us</a>
                 <a href="https://checkout.square.site/merchant/R22PQMTR7QY9G/checkout/L3NMF4KRS2FT425SFQHPOPTN" target="_blank" class="text-gray-600 hover:text-rainbow-violet transition duration-200">Donate</a>
             </nav>
-            <a href="#join" class="hidden md:block bg-rainbow-violet hover:bg-rainbow-indigo text-white font-semibold py-2 px-4 rounded-full shadow-lg transition duration-300">
+            <a href="#join" class="hidden lg:block bg-rainbow-violet hover:bg-rainbow-indigo text-white font-semibold py-2 px-4 rounded-full shadow-lg transition duration-300">
                 Get Started
             </a>
             <!-- Mobile Menu Button -->
-            <button id="menu-button" type="button" class="md:hidden p-2 -mr-2 text-gray-700 hover:text-rainbow-violet" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+            <button id="menu-button" type="button" class="lg:hidden p-2 -mr-2 text-gray-700 hover:text-rainbow-violet" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
                 <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6L6 18"></path></svg>
             </button>
         </div>
 
     <!-- Mobile Menu (inside the sticky header so it stays reachable while scrolling) -->
-    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-2">
+    <nav id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 pb-2">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
             <a href="#mission" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 w-full text-left">Our Mission</a>
             <a href="#lessons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 w-full text-left">The 7 Lessons</a>
@@ -297,6 +297,7 @@
         }
         menuButton.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
         mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+        document.getElementById('site-name').addEventListener('click', () => setMenu(false));
     </script>
 
 </body>

@@ -133,7 +133,8 @@
             <p class="text-center text-lg text-gray-600 mb-10 max-w-4xl mx-auto">
                 Each color of the Rainbow path teaches a vital life lesson, guiding girls toward responsible and purposeful adulthood.
             </p>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-7xl mx-auto">
+            <!-- Flex-wrap (not grid) so a partial last row stays centered: 2 per row on phones, 4 on tablets, all 7 on wide screens -->
+            <div class="flex flex-wrap justify-center gap-4 max-w-7xl mx-auto *:w-[calc(50%-0.5rem)] md:*:w-[calc(25%-0.75rem)] lg:*:w-[calc((100%-6rem)/7)]">
                 
                 <!-- Lesson 1: Red (Love) -->
                 <div class="bg-rainbow-red lesson-card text-white p-4 rounded-xl shadow-md text-center">

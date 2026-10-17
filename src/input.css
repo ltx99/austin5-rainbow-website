@@ -6,6 +6,8 @@
 /* Apply smooth scrolling for internal links */
 html {
   scroll-behavior: smooth;
+  /* Menu links stop below the sticky header instead of hiding headings under it */
+  scroll-padding-top: 5.5rem;
 }
 
 /* Custom gradient for the hero section to evoke the rainbow */
@@ -20,4 +22,9 @@ html {
 .lesson-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide the default triangle on FAQ questions (we draw our own arrow) */
+summary::-webkit-details-marker {
+  display: none;
 }

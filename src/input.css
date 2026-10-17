@@ -28,3 +28,21 @@ html {
 summary::-webkit-details-marker {
   display: none;
 }
+
+/* Seven Lessons tiles: titles and text scale with the tile's own width, so long
+   words like "Immortality" stay inside even with larger text or zoom. */
+.lesson-tile {
+  container-type: inline-size;
+}
+.lesson-tile > div:first-child {
+  font-size: min(1.5rem, 15cqi);
+  line-height: 1.2;
+}
+.lesson-tile > p {
+  font-size: min(0.875rem, 10.5cqi);
+}
+.lesson-tile > div:first-child,
+.lesson-tile > p {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}

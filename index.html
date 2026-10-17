@@ -89,7 +89,7 @@
 }
     </script>
     <!-- Site styles (built from src/input.css by Tailwind; see README) -->
-    <link rel="stylesheet" href="styles.css?v=402e25a039">
+    <link rel="stylesheet" href="styles.css?v=dd716d370e">
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
 
@@ -201,47 +201,47 @@
             <p class="text-center text-lg text-gray-600 mb-10 max-w-4xl mx-auto">
                 Each color of the rainbow stands for a life lesson you'll carry with you at home, at school, and beyond.
             </p>
-            <!-- Flex-wrap (not grid) so a partial last row stays centered: 2 per row on phones, 4 on tablets, all 7 on wide screens -->
-            <div class="flex flex-wrap justify-center gap-4 max-w-7xl mx-auto *:w-[calc(50%-0.5rem)] md:*:w-[calc(25%-0.75rem)] lg:*:w-[calc((100%-6rem)/7)]">
+            <!-- Flex-wrap (not grid) so a partial last row stays centered: 1 per row on very narrow screens, 2 on phones, 4 on tablets and small laptops, all 7 on wide screens -->
+            <div class="flex flex-wrap justify-center gap-4 max-w-7xl mx-auto *:w-full min-[360px]:*:w-[calc(50%-0.5rem)] md:*:w-[calc(25%-0.75rem)] xl:*:w-[calc((100%-6rem)/7)]">
                 
                 <!-- Lesson 1: Red (Love) -->
-                <div class="bg-rainbow-red lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                <div class="bg-rainbow-red lesson-card lesson-tile text-white p-4 rounded-xl shadow-md text-center">
                     <div class="text-2xl font-bold mb-1">❤️<br>Love</div>
                     <p class="text-sm">Of home, family, and community.</p>
                 </div>
 
                 <!-- Lesson 2: Orange (Religion) -->
-                <div class="bg-rainbow-orange lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                <div class="bg-rainbow-orange lesson-card lesson-tile text-white p-4 rounded-xl shadow-md text-center">
                     <div class="text-2xl font-bold mb-1">🙏<br>Religion</div>
                     <p class="text-sm">Belief in a Supreme Being and respect for all faiths.</p>
                 </div>
 
                 <!-- Lesson 3: Yellow (Nature) -->
-                <div class="bg-rainbow-yellow lesson-card text-gray-900 p-4 rounded-xl shadow-md text-center">
+                <div class="bg-rainbow-yellow lesson-card lesson-tile text-gray-900 p-4 rounded-xl shadow-md text-center">
                     <div class="text-2xl font-bold mb-1">🌳<br>Nature</div>
                     <p class="text-sm">Appreciation for the world around us.</p>
                 </div>
 
                 <!-- Lesson 4: Green (Immortality) -->
-                <div class="bg-rainbow-green lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                <div class="bg-rainbow-green lesson-card lesson-tile text-white p-4 rounded-xl shadow-md text-center">
                     <div class="text-2xl font-bold mb-1">💫<br>Immortality</div>
                     <p class="text-sm">Leaving a positive legacy through our actions.</p>
                 </div>
 
                 <!-- Lesson 5: Blue (Fidelity) -->
-                <div class="bg-rainbow-blue lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                <div class="bg-rainbow-blue lesson-card lesson-tile text-white p-4 rounded-xl shadow-md text-center">
                     <div class="text-2xl font-bold mb-1">🤝<br>Fidelity</div>
                     <p class="text-sm">Loyalty, honesty, and trustworthiness in all things.</p>
                 </div>
 
                 <!-- Lesson 6: Indigo (Patriotism) -->
-                <div class="bg-rainbow-indigo lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                <div class="bg-rainbow-indigo lesson-card lesson-tile text-white p-4 rounded-xl shadow-md text-center">
                     <div class="text-2xl font-bold mb-1"><svg class="inline-block w-8 h-[1.1rem] rounded-sm align-[-0.1em]" viewBox="0 0 19 10" aria-hidden="true"><rect width="19" height="10" fill="#b22234"/><path d="M0 1.15h19M0 2.69h19M0 4.23h19M0 5.77h19M0 7.31h19M0 8.85h19" stroke="#fff" stroke-width=".77"/><rect width="7.6" height="5.38" fill="#3c3b6e"/></svg><br>Patriotism</div>
                     <p class="text-sm">Love for country and active, responsible citizenship.</p>
                 </div>
 
                 <!-- Lesson 7: Violet (Service) -->
-                <div class="bg-rainbow-violet lesson-card text-white p-4 rounded-xl shadow-md text-center">
+                <div class="bg-rainbow-violet lesson-card lesson-tile text-white p-4 rounded-xl shadow-md text-center">
                     <div class="text-2xl font-bold mb-1">🎁<br>Service</div>
                     <p class="text-sm">Unselfish acts of kindness to others.</p>
                 </div>

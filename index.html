@@ -232,7 +232,7 @@
                         Email Us Today!
                     </a>
                     <!-- NEW DOWNLOAD BUTTON -->
-                    <a href="AA1042025-2017.pdf" download="Austin5_Rainbow_Application.pdf" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold text-lg py-3 px-10 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
+                    <a href="AA1042025-2017.pdf" download="Austin5_Rainbow_Application.pdf" data-dated-download target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold text-lg py-3 px-10 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
                         <span class="mr-2">⬇️</span> Download Application (PDF)
                     </a>
                 </div>
@@ -276,6 +276,14 @@
                 link.addEventListener('click', arm);
             });
         })();
+
+        // Application download: name the saved file with today's date,
+        // e.g. Austin5_Rainbow_Application_2026-10-17.pdf (visitor's local date).
+        document.querySelectorAll('[data-dated-download]').forEach(link => {
+            const d = new Date();
+            const ymd = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, '0'), String(d.getDate()).padStart(2, '0')].join('-');
+            link.setAttribute('download', link.getAttribute('download').replace(/\.pdf$/i, '_' + ymd + '.pdf'));
+        });
 
         // Phone menu: open/close with the button, close after choosing a link
         const menuButton = document.getElementById('menu-button');

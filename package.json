@@ -3,7 +3,7 @@
   "private": true,
   "description": "Builds styles.css for austin5.org",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./styles.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./styles.css --minify && node scripts/stamp-css.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"

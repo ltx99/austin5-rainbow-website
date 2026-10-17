@@ -11,6 +11,7 @@ on:
       - 'tailwind.config.js'
       - 'package.json'
       - 'package-lock.json'
+      - 'scripts/**'
   workflow_dispatch:
 
 permissions:
@@ -38,12 +39,12 @@ jobs:
 
       - name: Commit styles.css if it changed
         run: |
-          if git diff --quiet -- styles.css; then
+          if git diff --quiet -- styles.css index.html; then
             echo "styles.css is already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add styles.css
+          git add styles.css index.html
           git commit -m "Rebuild styles.css"
           git push

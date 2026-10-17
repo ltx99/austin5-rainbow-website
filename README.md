@@ -25,7 +25,7 @@ npm install
 npm run build
 ```
 
-Commit the updated `styles.css` along with your change.
+Commit the updated `styles.css` and `index.html` along with your change. The build also updates the `styles.css?v=…` version in `index.html` so browsers always load the matching styles.
 
 ## Contact email
 
